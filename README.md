@@ -1,17 +1,23 @@
 # Younes Benketira Portfolio Website
 
+[Check it out!](younesbenketira.web.app)
+
 ## About the project
-This website was created using React.js to display my skills as a full stack developer. Here you can find more information about what languages I know and projects I have created in the past!
+
+This website was created using React.js to display my projects and skills as a full stack developer. Here you can find more information about what languages I know and projects I have created in the past!
 
 ## Libraries Used
 
 ### Animations
-- react-scroll-parallax
-- framer-motion
+
+- [react-scroll-parallax](https://github.com/jscottsmith/react-scroll-parallax)
+- [framer-motion](https://www.framer.com/motion/)
 
 ### State Management
-- react-redux
-- @reduxjs/toolkit
+
+- [react-redux](https://react-redux.js.org/)
+- [@reduxjs/toolkit](https://redux-toolkit.js.org/)
 
 ### Misc.
-- @emailjs/browser
+
+- [@emailjs/browser](https://www.emailjs.com/)
