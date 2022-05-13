@@ -50,15 +50,15 @@ const ProjectInfo = (props) => {
       className={`${classes.projectInfo}`}
     >
       <motion.div variants={parentAnimation} className={classes.title}>
-        {[...title].map((char) => {
+        {[...title].map((char,index) => {
           let letterDiv;
           {
             char === " "
               ? (letterDiv = (
-                  <motion.div variants={childAnimation}>&nbsp;</motion.div>
+                  <motion.div key={' '} variants={childAnimation}>&nbsp;</motion.div>
                 ))
               : (letterDiv = (
-                  <motion.div variants={childAnimation}>{char}</motion.div>
+                  <motion.div key={index} variants={childAnimation}>{char}</motion.div>
                 ));
           }
           return letterDiv;
@@ -67,7 +67,7 @@ const ProjectInfo = (props) => {
       <motion.div variants={parentAnimation} className={classes.langs}>
         {languages.map((word) => {
           return (
-            <motion.div variants={childAnimation}>{word}&nbsp;</motion.div>
+            <motion.div key={word} variants={childAnimation}>{word}&nbsp;</motion.div>
           );
         })}
       </motion.div>

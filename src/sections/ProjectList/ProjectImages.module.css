@@ -41,6 +41,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .imagesWrapper {
+    height: 100vh;
+  }
+
   .leftColumn img {
     left: 25px;
   }
@@ -51,9 +55,18 @@
     height: 60vh;
   }
 
+  .imgL2 {
+    transform: translateY(40vh);
+  }
+
+  .imgR2 {
+    transform: translateY(60vh);
+  }
+
   .leftColumn img,
   .rightColumn img {
     position: absolute;
-    max-width: 60%;
+    max-width: 90%;
+    left: 10px;
   }
 }
