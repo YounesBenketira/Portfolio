@@ -2,39 +2,35 @@
   width: 50vw;
   height: 100%;
   padding: 20vh 5vw;
-  /* box-sizing: border-box; */
+
   top: 0;
   left: 0;
   position: fixed;
+
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /* background-color: brown; */
-}
-
-.title {
-  display: flex;
-  flex-direction: row;
-  font-size: 7rem;
-}
-
-.langs {
-  display: flex;
-  flex-direction: row;
-  font-size: 2.1rem;
-}
-
-.desc {
-  display: flex;
-  flex-direction: row;
-  font-size: 1.5rem;
-  max-width: 30vw;
 }
 
 .title,
 .langs,
 .desc {
+  display: flex;
+  flex-direction: row;
   padding-bottom: 25px;
+}
+
+.title {
+  font-size: 7rem;
+}
+
+.langs {
+  font-size: 2.1rem;
+}
+
+.desc {
+  font-size: 1.5rem;
+  max-width: 30vw;
 }
 
 .btnWrapper {

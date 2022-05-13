@@ -1,11 +1,9 @@
 .wrapper {
   height: 40vh;
   overflow: hidden;
-
 }
 
 .title {
-  /* font-size: 15rem; */
   width: 100%;
   font-size: 15vw;
   font-weight: 500;
@@ -16,7 +14,6 @@
 .text {
   position: absolute;
   max-width: 70vw;
-  /* font-size: 3vw; */
   font-size: 2rem;
 }
 

@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import React from "react";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 import Button from "../Button/Button";
 import BurgerMenu from "./BurgerMenu";
@@ -12,14 +12,15 @@ const NavBar = () => {
   const scrollPositionPercentage = useSelector(
     (state) => state.scrollPositionPercentage
   );
-  let isScrollingDown = scrollPositionPercentage > prevScrollPosPercentage;
-  prevScrollPosPercentage = scrollPositionPercentage;
 
   const scrollToPos = (scrollPos) => {
     window.scroll(0, scrollPos);
   };
 
-  const container = {
+  let isScrollingDown = scrollPositionPercentage > prevScrollPosPercentage;
+  prevScrollPosPercentage = scrollPositionPercentage;
+
+  const parentAnimation = {
     animate: {
       transition: {
         staggerChildren: 0.35,
@@ -27,7 +28,7 @@ const NavBar = () => {
     },
   };
 
-  const item = {
+  const childAnimation = {
     initial: {
       opacity: 0,
       x: -200,
@@ -53,7 +54,7 @@ const NavBar = () => {
         scrollToPos(0);
       }}
       className={classes.btn}
-      variants={item}
+      variants={childAnimation}
     >
       Home
     </Button>,
@@ -63,7 +64,7 @@ const NavBar = () => {
         scrollToPos(window.innerHeight * 0.75);
       }}
       className={classes.btn}
-      variants={item}
+      variants={childAnimation}
     >
       About Me
     </Button>,
@@ -73,7 +74,7 @@ const NavBar = () => {
         scrollToPos(window.innerHeight * 1.4);
       }}
       className={classes.btn}
-      variants={item}
+      variants={childAnimation}
     >
       Projects
     </Button>,
@@ -83,7 +84,7 @@ const NavBar = () => {
         scrollToPos(window.innerHeight * 3.7);
       }}
       className={classes.btn}
-      variants={item}
+      variants={childAnimation}
     >
       Skills
     </Button>,
@@ -93,7 +94,7 @@ const NavBar = () => {
         scrollToPos(window.innerHeight * 10);
       }}
       className={classes.btn}
-      variants={item}
+      variants={childAnimation}
     >
       Contact Me
     </Button>,
@@ -120,7 +121,7 @@ const NavBar = () => {
         className={`${classes.wrapper}`}
       >
         <motion.div
-          variants={container}
+          variants={parentAnimation}
           initial="initial"
           animate="animate"
           exit="exit"

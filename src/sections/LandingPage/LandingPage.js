@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
 
 import classes from "./LandingPage.module.css";
 
 const LandingPage = () => {
-  const container = {
+  const parentAnimation = {
     animate: {
       transition: {
         staggerChildren: 0.35,
@@ -12,7 +12,7 @@ const LandingPage = () => {
     },
   };
 
-  const item = {
+  const childAnimation = {
     initial: {
       opacity: 0,
       y: 200,
@@ -37,14 +37,14 @@ const LandingPage = () => {
 
   return (
     <motion.section
-      variants={container}
+      variants={parentAnimation}
       initial='initial'
       animate='animate'
       exit='exit'
       className={`section ${classes.wrapper}`}
     >
-      <motion.div variants={item} className={classes.name}>Younes Benketira</motion.div>
-      <motion.div variants={item} className={classes.jobTitle}>Full Stack Developer</motion.div>
+      <motion.div variants={childAnimation} className={classes.name}>Younes Benketira</motion.div>
+      <motion.div variants={childAnimation} className={classes.jobTitle}>Full Stack Developer</motion.div>
     </motion.section>
   );
 };

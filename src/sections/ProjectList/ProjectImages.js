@@ -1,6 +1,7 @@
 import React from "react";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { motion } from "framer-motion";
+
 import classes from "./ProjectImages.module.css";
 
 const ProjectImages = (props) => {
@@ -40,7 +41,7 @@ const ProjectImages = (props) => {
             <img src={imageList[0]} alt="template" />
           </Parallax>
           <Parallax speed={50}>
-            <img src={imageList[0]} alt="template" className={classes.imgL2} />
+            <img src={imageList[2]} alt="template" className={classes.imgL2} />
           </Parallax>
         </motion.div>
         <motion.div
@@ -50,11 +51,12 @@ const ProjectImages = (props) => {
           className={classes.rightColumn}
         >
           <Parallax speed={30}>
-            <img src={imageList[0]} alt="template" />
+            <img src={imageList[1]} alt="template" />
           </Parallax>
-          <Parallax speed={80}>
-            <img src={imageList[0]} alt="template" className={classes.imgR2} />
-          </Parallax>
+          {imageList[3] === undefined ? ' ' : <Parallax speed={80}>
+            <img src={imageList[3]} alt="template" className={classes.imgR2} />
+          </Parallax>}
+          
         </motion.div>
       </div>
     </ParallaxProvider>

@@ -10,7 +10,7 @@ const ProjectInfo = (props) => {
   const desc = props.displayedProjectInfo["desc"];
   const link = props.displayedProjectInfo["link"];
 
-  const container = {
+  const parentAnimation = {
     animate: {
       transition: {
         staggerChildren: 0.1,
@@ -18,7 +18,7 @@ const ProjectInfo = (props) => {
     },
   };
 
-  const item = {
+  const childAnimation = {
     initial: {
       opacity: 0,
       x: -200,
@@ -43,43 +43,39 @@ const ProjectInfo = (props) => {
 
   return (
     <motion.div
-      variants={container}
+      variants={parentAnimation}
       initial="initial"
       animate="animate"
       exit="exit"
-      key={Math.random()}
       className={`${classes.projectInfo}`}
     >
-      <motion.div key={Math.random()} variants={container} className={classes.title}>
+      <motion.div variants={parentAnimation} className={classes.title}>
         {[...title].map((char) => {
-          if (char === " ") {
-            return (
-              <motion.div key={Math.random()} variants={item}>
-                &nbsp;
-              </motion.div>
-            );
+          let letterDiv;
+          {
+            char === " "
+              ? (letterDiv = (
+                  <motion.div variants={childAnimation}>&nbsp;</motion.div>
+                ))
+              : (letterDiv = (
+                  <motion.div variants={childAnimation}>{char}</motion.div>
+                ));
           }
-          return (
-            <motion.div key={Math.random()} variants={item}>
-              {char}
-            </motion.div>
-          );
+          return letterDiv;
         })}
       </motion.div>
-      <motion.div key={Math.random()} variants={container} className={classes.langs}>
+      <motion.div variants={parentAnimation} className={classes.langs}>
         {languages.map((word) => {
           return (
-            <motion.div key={Math.random()} variants={item}>
-              {word}&nbsp;
-            </motion.div>
+            <motion.div variants={childAnimation}>{word}&nbsp;</motion.div>
           );
         })}
       </motion.div>
-      <motion.div variants={container} className={classes.desc}>
-        <motion.div key={Math.random()} variants={item}>{desc}</motion.div>
+      <motion.div variants={parentAnimation} className={classes.desc}>
+        <motion.div variants={childAnimation}>{desc}</motion.div>
       </motion.div>
-      <motion.div variants={container} className={classes.desc}>
-        <motion.div key={Math.random()} variants={item} className={classes.btnWrapper}>
+      <motion.div variants={parentAnimation} className={classes.desc}>
+        <motion.div variants={childAnimation} className={classes.btnWrapper}>
           <Button
             className={classes.btn}
             onClick={() => {

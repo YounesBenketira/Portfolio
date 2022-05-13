@@ -1,11 +1,9 @@
 import React, { useCallback, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-
+import { scrollActions } from "./store/index";
 import { LandingPage, AboutMe, ProjectList, Skills, Contact } from "./sections";
 import { NavBar } from "./components";
-import { scrollActions } from "./store/index";
-
 import classes from "./App.module.css";
 
 const App = () => {

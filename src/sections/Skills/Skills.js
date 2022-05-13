@@ -1,6 +1,7 @@
-import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
+
 import classes from "./Skills.module.css";
 
 const Skills = () => {
