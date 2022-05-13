@@ -44,12 +44,20 @@ const scrollSlice = createSlice({
       var docHeight = document.body.clientHeight;
       var winHeight = window.innerHeight;
       var scrollPercent = winYOffset / (docHeight - winHeight);
-      var scrollPercentRounded = scrollPercent * 100;
+      state.scrollPositionPercentage = scrollPercent * 100;
 
-      state.scrollPositionPercentage = scrollPercentRounded;
+      var deviceWidth = window.innerWidth;
+      let scrollPercentToMountProjectInfo;
+      let projectHeightInPercent;
+      if(deviceWidth <= 425){
+        scrollPercentToMountProjectInfo = 26;
+        projectHeightInPercent = 17.5;
+      } else {
+        scrollPercentToMountProjectInfo = 25;
+        projectHeightInPercent = 15;
+      }
 
-      const scrollPercentToMountProjectInfo = 25;
-      const projectHeightInPercent = 15;
+      
 
       state.projectIndex = Math.floor(
         (state.scrollPositionPercentage - scrollPercentToMountProjectInfo) /

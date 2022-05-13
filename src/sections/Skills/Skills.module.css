@@ -70,9 +70,13 @@
     height: 30vh;
   }
 
+  .skillListWrapper {
+    min-width: 98vw;
+  }
+
   .skillListHeader,
   .skillList {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .title {
