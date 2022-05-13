@@ -13,7 +13,7 @@ const ProjectInfo = (props) => {
   const container = {
     animate: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -28,7 +28,7 @@ const ProjectInfo = (props) => {
       x: 0,
       transition: {
         ease: [0.6, 0.01, -0.05, 0.95],
-        duration: 1,
+        duration: 0.5,
       },
     },
     exit: {

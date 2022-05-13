@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  overflow: visible;
+
 }
 
 .leftColumn,
@@ -47,6 +49,11 @@
 }
 
 @media screen and (max-width: 420px) {
+  .imagesWrapper {
+    height: 60vh;
+   
+  }
+
   .leftColumn img,
   .rightColumn img {
     position: absolute;

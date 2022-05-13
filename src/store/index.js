@@ -49,7 +49,7 @@ const scrollSlice = createSlice({
       state.scrollPositionPercentage = scrollPercentRounded;
 
       const scrollPercentToMountProjectInfo = 25;
-      const projectHeightInPercent = 14;
+      const projectHeightInPercent = 15;
 
       state.projectIndex = Math.floor(
         (state.scrollPositionPercentage - scrollPercentToMountProjectInfo) /
