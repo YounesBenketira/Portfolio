@@ -1,0 +1,76 @@
+.wrapper {
+  margin: 20vh 0vh;
+  height: 45vh;
+  box-sizing: border-box;
+  /* background-color: rgb(255, 0, 200); */
+}
+
+.title {
+  width: 100%;
+  font-size: 15rem;
+  font-weight: 500;
+  text-align: left;
+  left: 0;
+  z-index: 0;
+  color: var(--secondary-color);
+}
+
+.skillListWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
+  min-width: 75vw;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.skillList img {
+  max-width: 2.5vw;
+  max-height: 2.5vw;
+}
+
+.skillListHeader {
+  font-size: 2.5rem;
+  font-weight: 500;
+  max-width: 16.5vw;
+  text-align: center;
+}
+
+.skillList p {
+  margin: 0;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .skillListWrapper {
+    min-width: 85vw;
+  }
+
+  .skillListHeader,
+  .skillList {
+    font-size: 4vw;
+  }
+
+  .title {
+    font-size: 35vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .skillListHeader,
+  .skillList {
+    font-size: 4vw;
+  }
+
+  .title {
+    font-size: 35vw;
+  }
+}

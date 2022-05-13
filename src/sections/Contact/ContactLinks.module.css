@@ -1,0 +1,39 @@
+.wrapper {
+  min-width: 30vw;
+  height: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.wrapper a{
+  color: #000;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  border-bottom: 1.5px solid black;
+  border-radius: 0px;
+
+  background-color: transparent;
+}
+
+/* 
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active
+*/
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 70vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    min-width: 75vw;
+  }
+}

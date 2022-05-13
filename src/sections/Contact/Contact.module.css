@@ -1,0 +1,23 @@
+.wrapper {
+  margin: 25vh 0vh;
+  min-height: 50vh;
+  /* background-color: brown; */
+  z-index: 2;
+}
+
+.header {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1.1rem;
+  margin: 75px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 6vw;
+  }
+}

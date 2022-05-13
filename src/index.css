@@ -1,0 +1,21 @@
+:root {
+  --secondary-color: rgba(153, 137, 83, 0.15);
+  --tablet-size: 768px;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: white;
+  scroll-behavior: smooth;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}

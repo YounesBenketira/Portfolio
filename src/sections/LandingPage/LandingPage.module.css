@@ -1,0 +1,27 @@
+.wrapper {
+  height: 100vh;
+  text-align: center;
+  /* background-color: aqua; */
+}
+
+.name {
+  padding: 15px 0;
+  font-size: 10rem;
+  font-family: "Great Vibes";
+  font-weight: bold;
+}
+
+.jobTitle {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 25vw;
+    max-width: 90vw;
+  }
+
+  .jobTitle {
+    font-size: 8vw;
+  }
+}

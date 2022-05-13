@@ -1,0 +1,50 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 55vw;
+  height: 60px; 
+  font-size: 1.1rem;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.activeSection {
+  background-color: palegreen;
+}
+
+.btn {
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+}
+
+.btn:hover {
+  border-bottom: 1.5px solid black;
+  border-radius: 0px;
+
+  background-color: transparent;
+}
+
+.btn:active {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+}

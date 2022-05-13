@@ -1,0 +1,17 @@
+.projectListSection{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.imagesWrapper {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .imagesWrapper {
+    padding-top: 60vh;
+    width: 100%;
+  }
+}
