@@ -1,6 +1,6 @@
 .wrapper {
   margin: 0;
-  height: 100vh;
+  height: 60vh;
   box-sizing: border-box;
   /* background-color: rgb(255, 0, 200); */
 }
@@ -50,6 +50,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .skillListWrapper {
     min-width: 85vw;
   }

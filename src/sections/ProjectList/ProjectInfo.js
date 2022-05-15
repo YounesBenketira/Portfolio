@@ -50,24 +50,29 @@ const ProjectInfo = (props) => {
       className={`${classes.projectInfo}`}
     >
       <motion.div variants={parentAnimation} className={classes.title}>
-        {[...title].map((char,index) => {
+        {[...title].map((char, index) => {
           let letterDiv;
-          {
-            char === " "
-              ? (letterDiv = (
-                  <motion.div key={' '} variants={childAnimation}>&nbsp;</motion.div>
-                ))
-              : (letterDiv = (
-                  <motion.div key={index} variants={childAnimation}>{char}</motion.div>
-                ));
-          }
+          char === " "
+            ? (letterDiv = (
+                <motion.div key={" "} variants={childAnimation}>
+                  &nbsp;
+                </motion.div>
+              ))
+            : (letterDiv = (
+                <motion.div key={index} variants={childAnimation}>
+                  {char}
+                </motion.div>
+              ));
+              
           return letterDiv;
         })}
       </motion.div>
       <motion.div variants={parentAnimation} className={classes.langs}>
         {languages.map((word) => {
           return (
-            <motion.div key={word} variants={childAnimation}>{word}&nbsp;</motion.div>
+            <motion.div key={word} variants={childAnimation}>
+              {word}&nbsp;
+            </motion.div>
           );
         })}
       </motion.div>

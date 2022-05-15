@@ -6,6 +6,8 @@ import classes from "./ProjectImages.module.css";
 
 const ProjectImages = (props) => {
   const imageList = props.images;
+  let imageClassName;
+  props.type === 'mobile' ? imageClassName = classes.mobileImage : imageClassName = classes.desktopImage;
 
   const leftColumnAnimation = {
     animate: {
@@ -33,30 +35,41 @@ const ProjectImages = (props) => {
     <ParallaxProvider>
       <div className={classes.imagesWrapper}>
         <motion.div
-          variants={leftColumnAnimation}
+          // variants={leftColumnAnimation}
           animate="animate"
           className={classes.leftColumn}
         >
-          <Parallax speed={70}>
-            <img src={imageList[0]} alt="template" />
+          <Parallax speed={90}>
+            <img className={imageClassName} src={imageList[0]} alt="template" />
           </Parallax>
-          <Parallax speed={50}>
-            <img src={imageList[2]} alt="template" className={classes.imgL2} />
+          <Parallax speed={70}>
+            <img
+              className={`${imageClassName} ${classes.imgL2}`}
+              src={imageList[2]}
+              alt="template"
+            />
           </Parallax>
         </motion.div>
         <motion.div
-          variants={rightColumnAnimation}
+          // variants={rightColumnAnimation}
           initial="initial"
           animate="animate"
           className={classes.rightColumn}
         >
-          <Parallax speed={30}>
-            <img src={imageList[1]} alt="template" />
+          <Parallax speed={50}>
+            <img className={imageClassName} src={imageList[1]} alt="template" />
           </Parallax>
-          {imageList[3] === undefined ? ' ' : <Parallax speed={80}>
-            <img src={imageList[3]} alt="template" className={classes.imgR2} />
-          </Parallax>}
-          
+          {imageList[3] === undefined ? (
+            " "
+          ) : (
+            <Parallax speed={60}>
+              <img
+                className={`${imageClassName} ${classes.imgR2}`}
+                src={imageList[3]}
+                alt="template"
+              />
+            </Parallax>
+          )}
         </motion.div>
       </div>
     </ParallaxProvider>

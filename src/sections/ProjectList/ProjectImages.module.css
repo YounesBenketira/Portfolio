@@ -20,16 +20,17 @@
 
 .rightColumn {
   z-index: 3;
+  right: -10px;
 }
 
-.leftColumn img,
-.rightColumn img {
+.mobileImage {
+  position: absolute;
+  width: 73%;
+}
+
+.desktopImage {
   position: absolute;
   width: 95%;
-}
-
-.rightColumn img {
-  right: 25px;
 }
 
 .imgL2 {
@@ -37,7 +38,7 @@
 }
 
 .imgR2 {
-  transform: translateY(90vh);
+  transform: translateY(60vh);
 }
 
 @media screen and (max-width: 768px) {
@@ -45,8 +46,16 @@
     height: 100vh;
   }
 
-  .leftColumn img {
-    left: 25px;
+  .mobileImage {
+    position: absolute;
+    max-width: 90%;
+    right: 6vw;
+  }
+
+  .desktopImage {
+    position: absolute;
+    max-width: 90%;
+    right: 3vw;
   }
 }
 
@@ -67,6 +76,6 @@
   .rightColumn img {
     position: absolute;
     max-width: 90%;
-    left: 10px;
+    right: 20px;
   }
 }

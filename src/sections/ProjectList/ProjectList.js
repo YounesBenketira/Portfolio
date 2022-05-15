@@ -26,7 +26,7 @@ const ProjectList = () => {
       <div className={classes.imagesWrapper}>
         {projectList.map((project) => {
           return (
-            <ProjectImages key={Math.random()} images={project["images"]} />
+            <ProjectImages key={project["key"]} images={project["images"]} type={project["type"]} />
           );
         })}
       </div>

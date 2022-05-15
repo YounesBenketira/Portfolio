@@ -14,6 +14,7 @@ const initialState = {
       langs: ["Flutter", "●", "Dart"],
       desc: "Mobile application made with Google's Flutter SDK. The application allows users to log their workouts and provides them with many health-related tools.",
       link: "https://github.com/YounesBenketira/FitN",
+      type: "mobile",
       images: [fitn1, fitn2, fitn3],
     },
     {
@@ -22,6 +23,7 @@ const initialState = {
       langs: ["React.js"],
       desc: "Web Application created with React.js that visualizes many different types of algorithms using graphs and other types of tools.",
       link: "https://www.swag.com",
+      type: "desktop",
       images: [desktop, desktop, desktop, desktop],
     },
     {
@@ -30,6 +32,7 @@ const initialState = {
       langs: ["Coming", "●", "Soon"],
       desc: "This will be my next project after VisualGo.",
       link: "https://www.swag.com",
+      type: "desktop",
       images: [desktop, desktop, desktop, desktop],
     },
   ],
@@ -54,7 +57,7 @@ const scrollSlice = createSlice({
         projectHeightInPercent = 17;
       } else if (deviceWidth <= 768) {
         scrollPercentToMountProjectInfo = 20;
-        projectHeightInPercent = 17;
+        projectHeightInPercent = 18;
       } else {
         scrollPercentToMountProjectInfo = 25;
         projectHeightInPercent = 15;
