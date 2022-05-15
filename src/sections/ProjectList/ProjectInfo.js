@@ -63,10 +63,14 @@ const ProjectInfo = (props) => {
                   {char}
                 </motion.div>
               ));
-              
+
           return letterDiv;
         })}
       </motion.div>
+      {title === 'VisualGo' ? <motion.div variants={childAnimation}>
+        <p className={classes.status}>Coming Soon</p>
+      </motion.div> : ''}
+      
       <motion.div variants={parentAnimation} className={classes.langs}>
         {languages.map((word) => {
           return (

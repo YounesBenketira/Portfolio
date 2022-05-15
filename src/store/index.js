@@ -1,5 +1,5 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
-import { mobile, desktop } from "../assets/images";
+import { desktop } from "../assets/images";
 import { fitn1, fitn2, fitn3 } from "../assets/images";
 
 const initialState = {
@@ -22,19 +22,19 @@ const initialState = {
       title: "VisualGo",
       langs: ["React.js"],
       desc: "Web Application created with React.js that visualizes many different types of algorithms using graphs and other types of tools.",
-      link: "https://www.swag.com",
+      link: "https://github.com/YounesBenketira/VisualGo",
       type: "desktop",
       images: [desktop, desktop, desktop, desktop],
     },
-    {
-      key: "2",
-      title: "Coming Soon",
-      langs: ["Coming", "●", "Soon"],
-      desc: "This will be my next project after VisualGo.",
-      link: "https://www.swag.com",
-      type: "desktop",
-      images: [desktop, desktop, desktop, desktop],
-    },
+    // {
+    //   key: "2",
+    //   title: "Coming Soon",
+    //   langs: ["Coming", "●", "Soon"],
+    //   desc: "This will be my next project after VisualGo.",
+    //   link: "https://github.com/YounesBenketira",
+    //   type: "desktop",
+    //   images: [desktop, desktop, desktop, desktop],
+    // },
   ],
 };
 
@@ -53,14 +53,14 @@ const scrollSlice = createSlice({
       let scrollPercentToMountProjectInfo;
       let projectHeightInPercent;
       if (deviceWidth <= 425) {
-        scrollPercentToMountProjectInfo = 26;
-        projectHeightInPercent = 17;
+        scrollPercentToMountProjectInfo = 28;
+        projectHeightInPercent = 22;
       } else if (deviceWidth <= 768) {
-        scrollPercentToMountProjectInfo = 20;
-        projectHeightInPercent = 18;
-      } else {
         scrollPercentToMountProjectInfo = 25;
-        projectHeightInPercent = 15;
+        projectHeightInPercent = 23;
+      } else {
+        scrollPercentToMountProjectInfo = 28;
+        projectHeightInPercent = 20;
       }
 
       state.projectIndex = Math.floor(

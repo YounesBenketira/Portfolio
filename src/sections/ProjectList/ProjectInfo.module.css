@@ -17,7 +17,7 @@
 .desc {
   display: flex;
   flex-direction: row;
-  padding-bottom: 25px;
+
 }
 
 .title {
@@ -26,11 +26,21 @@
 
 .langs {
   font-size: 2.1rem;
+  margin-bottom: 15px;
 }
 
 .desc {
   font-size: 1.5rem;
   max-width: 30vw;
+  margin-bottom: 15px;
+}
+
+.status {
+  background-color: black;
+  color: white;
+  width: max-content;
+  padding: 10px;
+  margin: 0 0 15px 0;
 }
 
 .btn {
@@ -42,6 +52,8 @@
   border-bottom: 1.5px solid black;
   border-radius: 0px;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .title {

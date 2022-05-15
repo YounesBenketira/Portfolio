@@ -81,7 +81,7 @@ const NavBar = () => {
     <Button
       key={3}
       onClick={() => {
-        scrollToPos(window.innerHeight * 3.7);
+        scrollToPos(window.innerHeight * 2.9);
       }}
       className={classes.btn}
       variants={childAnimation}
@@ -91,7 +91,7 @@ const NavBar = () => {
     <Button
       key={4}
       onClick={() => {
-        scrollToPos(window.innerHeight * 10);
+        scrollToPos(window.innerHeight * 12);
       }}
       className={classes.btn}
       variants={childAnimation}
