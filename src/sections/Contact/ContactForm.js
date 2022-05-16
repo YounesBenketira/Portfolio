@@ -1,10 +1,11 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
+import emailJsCredentials from "./config";
 import { Button } from "../../components";
 import classes from "./ContactForm.module.css";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import { motion } from "framer-motion";
 
 const ContactForm = (props) => {
   const form = useRef();
@@ -12,6 +13,7 @@ const ContactForm = (props) => {
   const [showSubjectError, setShowSubjectError] = useState(false);
   const [showMessageError, setShowMessageError] = useState(false);
   const [showContactFormError, setShowContactFormError] = useState(false);
+
 
   const contactFormHandler = (event) => {
     event.preventDefault();
@@ -28,10 +30,10 @@ const ContactForm = (props) => {
     ) {
       emailjs
         .sendForm(
-          "service_wwuewx6",
-          "template_we2b6vo",
+          emailJsCredentials.SERVICE_ID,
+          emailJsCredentials.TEMPLATE_ID,
           form.current,
-          "dLvfkh36JowpIFGow"
+          emailJsCredentials.PUBLIC_KEY
         )
         .then(
           (result) => {
