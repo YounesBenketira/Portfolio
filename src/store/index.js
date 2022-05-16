@@ -53,8 +53,8 @@ const scrollSlice = createSlice({
       let scrollPercentToMountProjectInfo;
       let projectHeightInPercent;
       if (deviceWidth <= 425) {
-        scrollPercentToMountProjectInfo = 28;
-        projectHeightInPercent = 22;
+        scrollPercentToMountProjectInfo = 30;
+        projectHeightInPercent = 20;
       } else if (deviceWidth <= 768) {
         scrollPercentToMountProjectInfo = 25;
         projectHeightInPercent = 23;

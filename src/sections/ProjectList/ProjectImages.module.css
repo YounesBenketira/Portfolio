@@ -72,10 +72,15 @@
     transform: translateY(60vh);
   }
 
-  .leftColumn img,
-  .rightColumn img {
+  .mobileImage {
     position: absolute;
     max-width: 90%;
-    right: 20px;
+    right: 6vw;
+  }
+
+  .desktopImage {
+    position: absolute;
+    max-width: 90%;
+    right: 3vw;
   }
 }
