@@ -25,12 +25,18 @@
 
 .mobileImage {
   position: absolute;
-  width: 73%;
+  width: 85%;
 }
 
 .desktopImage {
   position: absolute;
   width: 95%;
+}
+
+.imgL2Mobile {
+  transform: translateY(50vh);
+  width: 80%;
+  left: 10px;
 }
 
 .imgL2 {

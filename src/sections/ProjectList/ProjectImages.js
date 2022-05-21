@@ -7,7 +7,9 @@ import classes from "./ProjectImages.module.css";
 const ProjectImages = (props) => {
   const imageList = props.images;
   let imageClassName;
-  props.type === 'mobile' ? imageClassName = classes.mobileImage : imageClassName = classes.desktopImage;
+  props.type === "mobile"
+    ? (imageClassName = classes.mobileImage)
+    : (imageClassName = classes.desktopImage);
 
   const leftColumnAnimation = {
     animate: {
@@ -35,7 +37,7 @@ const ProjectImages = (props) => {
     <ParallaxProvider>
       <div className={classes.imagesWrapper}>
         <motion.div
-          // variants={leftColumnAnimation}
+          variants={leftColumnAnimation}
           animate="animate"
           className={classes.leftColumn}
         >
@@ -44,14 +46,16 @@ const ProjectImages = (props) => {
           </Parallax>
           <Parallax speed={70}>
             <img
-              className={`${imageClassName} ${classes.imgL2}`}
+              className={`${imageClassName} ${
+                imageList[3] === undefined ? classes.imgL2Mobile : classes.imgL2
+              }`}
               src={imageList[2]}
               alt="template"
             />
           </Parallax>
         </motion.div>
         <motion.div
-          // variants={rightColumnAnimation}
+          variants={rightColumnAnimation}
           initial="initial"
           animate="animate"
           className={classes.rightColumn}
