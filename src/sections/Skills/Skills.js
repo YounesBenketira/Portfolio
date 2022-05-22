@@ -82,7 +82,7 @@ const Skills = () => {
               Frameworks
             </motion.p>
             <motion.p variants={item}>React.js</motion.p>
-            <motion.p variants={item}>Next.js</motion.p>
+            {/* <motion.p variants={item}>Next.js</motion.p> */}
             <motion.p variants={item}>Node.js</motion.p>
             <motion.p variants={item}>Flutter</motion.p>
           </motion.div>
@@ -99,7 +99,7 @@ const Skills = () => {
             </motion.p>
             <motion.p variants={item}>Firebase</motion.p>
             <motion.p variants={item}>Github</motion.p>
-            <motion.p variants={item}>AWS</motion.p>
+            {/* <motion.p variants={item}>AWS</motion.p> */}
           </motion.div>
         </AnimatePresence>
       </div>
