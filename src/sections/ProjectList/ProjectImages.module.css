@@ -29,7 +29,8 @@
 
 .desktopImage {
   position: absolute;
-  width: 95%;
+  width: 100%;
+  height: 300px;
 }
 
 .imgL2Mobile {

@@ -1,6 +1,6 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 import { desktop } from "../assets/images";
-import { fitn1, fitn2, fitn3 } from "../assets/images";
+import { fitn1, fitn2, fitn3, vg1, vg2, vg3, vg4 } from "../assets/images";
 
 const initialState = {
   scrollPositionPercentage: 0,
@@ -24,7 +24,7 @@ const initialState = {
       desc: "Web Application created with React.js that visualizes many different types of algorithms using graphs and other types of tools.",
       link: "https://github.com/YounesBenketira/VisualGo",
       type: "desktop",
-      images: [desktop, desktop, desktop, desktop],
+      images: [vg1, vg2, vg3, vg4],
     },
     // {
     //   key: "2",
