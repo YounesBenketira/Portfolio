@@ -24,11 +24,13 @@ const ProjectList = () => {
         )}
       </AnimatePresence>
       <div className={classes.imagesWrapper}>
-        {projectList.map((project) => {
+        {/* {projectList.map((project) => {
           return (
             <ProjectImages key={project["key"]} images={project["images"]} type={project["type"]} />
           );
-        })}
+        })} */}
+        <ProjectImages key={projectList[0]["key"]} images={projectList[0]["images"]} type={projectList[0]["type"]} />
+        <ProjectImages key={projectList[1]["key"]} images={projectList[1]["images"]} type={projectList[1]["type"]} />
       </div>
     </section>
   );
