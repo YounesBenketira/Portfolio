@@ -12,7 +12,17 @@ const FitNPreview = () => {
 
   return (
     <div className={classes.imagesWrapper}>
-      <motion.div className={classes.leftColumn}>
+      <motion.div
+        animate={{
+          x: 20,
+          transition: {
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+          },
+        }}
+        className={classes.leftColumn}
+      >
         <motion.img
           animate={{
             y: -(scrollPositionPercentage * 5),
@@ -29,7 +39,17 @@ const FitNPreview = () => {
           className={classes.leftImg2}
         />
       </motion.div>
-      <motion.div className={classes.rightColumn}>
+      <motion.div
+        animate={{
+          x: -20,
+          transition: {
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+          },
+        }}
+        className={classes.rightColumn}
+      >
         <motion.img
           animate={{
             y: -(scrollPositionPercentage * 5),
