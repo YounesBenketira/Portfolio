@@ -1,6 +1,6 @@
 .imagesWrapper {
   width: 100%;
-  height: 70vh;
+  overflow:visible;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -8,6 +8,10 @@
 
 .leftColumn,
 .rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 50%;
   background-color: transparent;
   box-sizing: border-box;
@@ -23,29 +27,26 @@
 }
 
 .mobileImage {
-  position: absolute;
   width: 85%;
 }
 
 .desktopImage {
-  position: absolute;
   width: 100%;
   height: 300px;
 }
 
-.imgL2Mobile {
-  transform: translateY(50vh);
-  width: 80%;
-  left: 10px;
+/* .imgL2Mobile {
+  transform: translateY(-10vh);
+  width: 85%;
 }
 
 .imgL2 {
-  transform: translateY(50vh);
+  transform: translateY(10vh);
 }
 
 .imgR2 {
-  transform: translateY(60vh);
-}
+  transform: translateY(8vh);
+} */
 
 @media screen and (max-width: 768px) {
   .imagesWrapper {

@@ -1,5 +1,5 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
-import { desktop } from "../assets/images";
+
 import { fitn1, fitn2, fitn3, vg1, vg2, vg3, vg4 } from "../assets/images";
 
 const initialState = {
@@ -59,8 +59,8 @@ const scrollSlice = createSlice({
         scrollPercentToMountProjectInfo = 25;
         projectHeightInPercent = 23;
       } else {
-        scrollPercentToMountProjectInfo = 28;
-        projectHeightInPercent = 20;
+        scrollPercentToMountProjectInfo = 22;
+        projectHeightInPercent = 27;
       }
 
       state.projectIndex = Math.floor(

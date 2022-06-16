@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { scrollActions } from "./store/index";
 import { LandingPage, AboutMe, ProjectList, Skills, Contact } from "./sections";
+import NewProjectList from "./sections/ProjectList/NewProjectList";
 import { NavBar } from "./components";
 import classes from "./App.module.css";
 
@@ -26,7 +27,7 @@ const App = () => {
         <NavBar />
         <LandingPage />
         <AboutMe />
-        <ProjectList/>
+        <NewProjectList/>
         <Skills />
         <Contact />
       </div>

@@ -1,0 +1,41 @@
+.imagesWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.leftColumn,
+.rightColumn {
+  height: 70vh;
+  width: 25vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftColumn img,
+.rightColumn img {
+  position: absolute;
+  width: 85%;
+}
+
+.rightColumn {
+  margin-top: 50vh;
+}
+
+.leftImg2 {
+  top: 1200px;
+}
+
+@media screen and (max-width: 768px) {
+  .leftColumn,
+  .rightColumn {
+    width: 45vw;
+    
+  }
+
+  .rightColumn {
+    padding-right: 2vw;
+  }
+}
